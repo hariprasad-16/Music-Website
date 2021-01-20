@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>Music Website</title>
+        <link rel="stylesheet" href="styles.css">
+        
+    </head>
+
+    <body>
+      <div class="container">
+          <div class="navbar">
+            <a class="logo" href="">NCS</a>
+              
+              <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Specifications</a></li>
+                  <li><a href="#">Products</a></li>
+                  <li><a href="#">Connect</a></li>
+              </ul>
+          </div>
+          <div class="content">
+              <div class="left-col">
+                  <h1>THE <br> REAL<br>SOUND</h1>
+              </div>
+              <div class="right-col">
+                  <p>Click here to listen</p>
+                  <img src="media/icon.png" id="icon">
+              </div>
+          </div>
+
+      </div>
+      <audio id="mysong">
+          <source src="media/song.mp3" type="audio/mp3">
+      </audio>
+      <script>
+          var mysong=document.getElementById("mysong");
+          var icon =document.getElementById("icon");
+          icon.onclick=function(){
+              if(mysong.paused)
+              {
+                  mysong.play();
+                  icon.src="media/pause.png"
+              }
+              else{
+                  mysong.pause();
+                  icon.src="media/icon.png"
+              }
+          }
+
+      </script>
+    </body>
+</html>
